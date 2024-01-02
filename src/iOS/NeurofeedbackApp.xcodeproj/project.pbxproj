@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4132FEB02B44A6EC00883E18 /* NeurofeedbackAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */; };
+		4132FEB22B44A6EC00883E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEB12B44A6EC00883E18 /* ContentView.swift */; };
+		4132FEB42B44A6EF00883E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132FEB32B44A6EF00883E18 /* Assets.xcassets */; };
+		4132FEB72B44A6EF00883E18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132FEB62B44A6EF00883E18 /* Preview Assets.xcassets */; };
+		4132FEC12B44A6EF00883E18 /* NeurofeedbackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEC02B44A6EF00883E18 /* NeurofeedbackAppTests.swift */; };
+		4132FECB2B44A6EF00883E18 /* NeurofeedbackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FECA2B44A6EF00883E18 /* NeurofeedbackAppUITests.swift */; };
+		4132FECD2B44A6F000883E18 /* NeurofeedbackAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FECC2B44A6F000883E18 /* NeurofeedbackAppUITestsLaunchTests.swift */; };
+		4132FEDC2B44A77E00883E18 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEDB2B44A77E00883E18 /* Device.swift */; };
+		4132FEDE2B44A79100883E18 /* EEGModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEDD2B44A79100883E18 /* EEGModels.swift */; };
+		4132FEE12B44A8D400883E18 /* SimulatedDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4132FEBD2B44A6EF00883E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4132FEA42B44A6EC00883E18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4132FEAB2B44A6EC00883E18;
+			remoteInfo = NeurofeedbackApp;
+		};
+		4132FEC72B44A6EF00883E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4132FEA42B44A6EC00883E18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4132FEAB2B44A6EC00883E18;
+			remoteInfo = NeurofeedbackApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4132FEAC2B44A6EC00883E18 /* NeurofeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurofeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppApp.swift; sourceTree = "<group>"; };
+		4132FEB12B44A6EC00883E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4132FEB32B44A6EF00883E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4132FEB62B44A6EF00883E18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4132FEBC2B44A6EF00883E18 /* NeurofeedbackAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurofeedbackAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132FEC02B44A6EF00883E18 /* NeurofeedbackAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppTests.swift; sourceTree = "<group>"; };
+		4132FEC62B44A6EF00883E18 /* NeurofeedbackAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurofeedbackAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4132FECA2B44A6EF00883E18 /* NeurofeedbackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppUITests.swift; sourceTree = "<group>"; };
+		4132FECC2B44A6F000883E18 /* NeurofeedbackAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4132FEDB2B44A77E00883E18 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		4132FEDD2B44A79100883E18 /* EEGModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEGModels.swift; sourceTree = "<group>"; };
+		4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedDataGenerator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4132FEA92B44A6EC00883E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEB92B44A6EF00883E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEC32B44A6EF00883E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4132FEA32B44A6EC00883E18 = {
+			isa = PBXGroup;
+			children = (
+				4132FEAE2B44A6EC00883E18 /* NeurofeedbackApp */,
+				4132FEBF2B44A6EF00883E18 /* NeurofeedbackAppTests */,
+				4132FEC92B44A6EF00883E18 /* NeurofeedbackAppUITests */,
+				4132FEAD2B44A6EC00883E18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4132FEAD2B44A6EC00883E18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEAC2B44A6EC00883E18 /* NeurofeedbackApp.app */,
+				4132FEBC2B44A6EF00883E18 /* NeurofeedbackAppTests.xctest */,
+				4132FEC62B44A6EF00883E18 /* NeurofeedbackAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4132FEAE2B44A6EC00883E18 /* NeurofeedbackApp */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEDF2B44A8BE00883E18 /* Utils */,
+				4132FED92B44A75400883E18 /* Devices */,
+				4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */,
+				4132FEB12B44A6EC00883E18 /* ContentView.swift */,
+				4132FEB32B44A6EF00883E18 /* Assets.xcassets */,
+				4132FEB52B44A6EF00883E18 /* Preview Content */,
+			);
+			path = NeurofeedbackApp;
+			sourceTree = "<group>";
+		};
+		4132FEB52B44A6EF00883E18 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEB62B44A6EF00883E18 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4132FEBF2B44A6EF00883E18 /* NeurofeedbackAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEC02B44A6EF00883E18 /* NeurofeedbackAppTests.swift */,
+			);
+			path = NeurofeedbackAppTests;
+			sourceTree = "<group>";
+		};
+		4132FEC92B44A6EF00883E18 /* NeurofeedbackAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4132FECA2B44A6EF00883E18 /* NeurofeedbackAppUITests.swift */,
+				4132FECC2B44A6F000883E18 /* NeurofeedbackAppUITestsLaunchTests.swift */,
+			);
+			path = NeurofeedbackAppUITests;
+			sourceTree = "<group>";
+		};
+		4132FED92B44A75400883E18 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEDA2B44A76300883E18 /* Models */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		4132FEDA2B44A76300883E18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEDB2B44A77E00883E18 /* Device.swift */,
+				4132FEDD2B44A79100883E18 /* EEGModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4132FEDF2B44A8BE00883E18 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4132FEAB2B44A6EC00883E18 /* NeurofeedbackApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132FED02B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackApp" */;
+			buildPhases = (
+				4132FEA82B44A6EC00883E18 /* Sources */,
+				4132FEA92B44A6EC00883E18 /* Frameworks */,
+				4132FEAA2B44A6EC00883E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeurofeedbackApp;
+			productName = NeurofeedbackApp;
+			productReference = 4132FEAC2B44A6EC00883E18 /* NeurofeedbackApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4132FEBB2B44A6EF00883E18 /* NeurofeedbackAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132FED32B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackAppTests" */;
+			buildPhases = (
+				4132FEB82B44A6EF00883E18 /* Sources */,
+				4132FEB92B44A6EF00883E18 /* Frameworks */,
+				4132FEBA2B44A6EF00883E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4132FEBE2B44A6EF00883E18 /* PBXTargetDependency */,
+			);
+			name = NeurofeedbackAppTests;
+			productName = NeurofeedbackAppTests;
+			productReference = 4132FEBC2B44A6EF00883E18 /* NeurofeedbackAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4132FEC52B44A6EF00883E18 /* NeurofeedbackAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4132FED62B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackAppUITests" */;
+			buildPhases = (
+				4132FEC22B44A6EF00883E18 /* Sources */,
+				4132FEC32B44A6EF00883E18 /* Frameworks */,
+				4132FEC42B44A6EF00883E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4132FEC82B44A6EF00883E18 /* PBXTargetDependency */,
+			);
+			name = NeurofeedbackAppUITests;
+			productName = NeurofeedbackAppUITests;
+			productReference = 4132FEC62B44A6EF00883E18 /* NeurofeedbackAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4132FEA42B44A6EC00883E18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					4132FEAB2B44A6EC00883E18 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					4132FEBB2B44A6EF00883E18 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 4132FEAB2B44A6EC00883E18;
+					};
+					4132FEC52B44A6EF00883E18 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 4132FEAB2B44A6EC00883E18;
+					};
+				};
+			};
+			buildConfigurationList = 4132FEA72B44A6EC00883E18 /* Build configuration list for PBXProject "NeurofeedbackApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4132FEA32B44A6EC00883E18;
+			productRefGroup = 4132FEAD2B44A6EC00883E18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4132FEAB2B44A6EC00883E18 /* NeurofeedbackApp */,
+				4132FEBB2B44A6EF00883E18 /* NeurofeedbackAppTests */,
+				4132FEC52B44A6EF00883E18 /* NeurofeedbackAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4132FEAA2B44A6EC00883E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132FEB72B44A6EF00883E18 /* Preview Assets.xcassets in Resources */,
+				4132FEB42B44A6EF00883E18 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEBA2B44A6EF00883E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEC42B44A6EF00883E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4132FEA82B44A6EC00883E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132FEDC2B44A77E00883E18 /* Device.swift in Sources */,
+				4132FEE12B44A8D400883E18 /* SimulatedDataGenerator.swift in Sources */,
+				4132FEB22B44A6EC00883E18 /* ContentView.swift in Sources */,
+				4132FEB02B44A6EC00883E18 /* NeurofeedbackAppApp.swift in Sources */,
+				4132FEDE2B44A79100883E18 /* EEGModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEB82B44A6EF00883E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132FEC12B44A6EF00883E18 /* NeurofeedbackAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4132FEC22B44A6EF00883E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4132FECB2B44A6EF00883E18 /* NeurofeedbackAppUITests.swift in Sources */,
+				4132FECD2B44A6F000883E18 /* NeurofeedbackAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4132FEBE2B44A6EF00883E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4132FEAB2B44A6EC00883E18 /* NeurofeedbackApp */;
+			targetProxy = 4132FEBD2B44A6EF00883E18 /* PBXContainerItemProxy */;
+		};
+		4132FEC82B44A6EF00883E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4132FEAB2B44A6EC00883E18 /* NeurofeedbackApp */;
+			targetProxy = 4132FEC72B44A6EF00883E18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4132FECE2B44A6F000883E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4132FECF2B44A6F000883E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4132FED12B44A6F000883E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NeurofeedbackApp/Preview Content\"";
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4132FED22B44A6F000883E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NeurofeedbackApp/Preview Content\"";
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4132FED42B44A6F000883E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeurofeedbackApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeurofeedbackApp";
+			};
+			name = Debug;
+		};
+		4132FED52B44A6F000883E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeurofeedbackApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeurofeedbackApp";
+			};
+			name = Release;
+		};
+		4132FED72B44A6F000883E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeurofeedbackApp;
+			};
+			name = Debug;
+		};
+		4132FED82B44A6F000883E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSGBM52GU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shishirkumarmishra.neurofeedbackapp.NeurofeedbackAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeurofeedbackApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4132FEA72B44A6EC00883E18 /* Build configuration list for PBXProject "NeurofeedbackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132FECE2B44A6F000883E18 /* Debug */,
+				4132FECF2B44A6F000883E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132FED02B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132FED12B44A6F000883E18 /* Debug */,
+				4132FED22B44A6F000883E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132FED32B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132FED42B44A6F000883E18 /* Debug */,
+				4132FED52B44A6F000883E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4132FED62B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4132FED72B44A6F000883E18 /* Debug */,
+				4132FED82B44A6F000883E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4132FEA42B44A6EC00883E18 /* Project object */;
+}
