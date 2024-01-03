@@ -7,6 +7,18 @@
 
 import Foundation
 
+enum EEGFrequency : String, CaseIterable {
+    case all
+    case theta
+    case alpha
+    case beta
+    case gamma
+    
+    var id :String {
+        rawValue
+    }
+}
+
 //electrical activity or voltage measured by each electrode at that specific time
 struct EEGChannel :RawRepresentable, Hashable {
     let rawValue: String

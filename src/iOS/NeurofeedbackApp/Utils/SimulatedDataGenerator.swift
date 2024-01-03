@@ -21,7 +21,10 @@ class SimulatedDataGenerator  {
     func generateSeries(values: inout [EEGChannel:Double], time: inout Double) -> EEGSeries {
         var readings:  [EEGReading] = []
         time += (1/Double(sampleRate))
-        let allChannels = Mirror(reflecting: EEGChannel.self).children.compactMap { $0.value as? EEGChannel }
+        
+        let allChannels: [EEGChannel] = [
+            .af7, .af8, .fpz, .t9, .t10, .cz, .fz, .f3, .f4, .o1
+        ]
         
         allChannels.forEach { channel in
             let randomValue = Double.random(in: -3.35...3.5)
@@ -29,9 +32,7 @@ class SimulatedDataGenerator  {
             readings.append(EEGReading(channel:channel, value:randomValue))
         }
         
-        var result :EEGSeries = EEGSeries(timestamp: <#T##Date#>, readings:readings)
-        
-        return result
+        return  EEGSeries(timestamp: (Date(timeIntervalSince1970: time)), readings:readings)
     }
     
     func generateRecording (durationTime : TimeInterval, recordingOffset:TimeInterval = 0 ) -> (baseTime:TimeInterval, data:[EEGSeries]) {
@@ -41,7 +42,7 @@ class SimulatedDataGenerator  {
         
         let sampleCount = Int(durationTime * Double(sampleRate))
         
-        var result = (0..<sampleCount).map { _ in
+        let result = (0..<sampleCount).map { _ in
             return generateSeriesData(startTimeSince1970)
         }
         
@@ -55,4 +56,31 @@ class SimulatedDataGenerator  {
         return series
     }
     
+}
+
+
+class SimulatedRecorder {
+    var sampleRate : Int = 0
+    var mockGenerators : [EEGFrequency:SimulatedDataGenerator] = [:]
+    
+    init(sampleRate: Int) {
+        self.sampleRate = sampleRate
+        for frequency in EEGFrequency.allCases {
+            mockGenerators[frequency] = SimulatedDataGenerator(sampleRate: self.sampleRate )
+        }
+    }
+        
+    func generateRecording () -> [EEGFrequency:EEGReading] {
+        var result : [EEGFrequency:EEGReading] = [:]
+        for(frequency, dataGenerator) in mockGenerators {
+            var channelReadings:[EEGChannel:Double] = [:];
+            var time: Double = 0;
+            let dataSeries = dataGenerator.generateSeries(values: &channelReadings, time: &time)
+            dataSeries.getChannels().forEach{channel in
+                let reading = dataSeries.getReadingForChannel(channel: channel)
+                result[frequency] = reading
+            }
+        }
+        return result
+    }
 }
