@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DF8C99320F9C883E259EE86 /* Pods_NeurofeedbackApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C63ACBA8A8B62F663621FCF /* Pods_NeurofeedbackApp.framework */; };
 		4132FEB02B44A6EC00883E18 /* NeurofeedbackAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */; };
 		4132FEB22B44A6EC00883E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEB12B44A6EC00883E18 /* ContentView.swift */; };
 		4132FEB42B44A6EF00883E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132FEB32B44A6EF00883E18 /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 		4132FEDC2B44A77E00883E18 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEDB2B44A77E00883E18 /* Device.swift */; };
 		4132FEDE2B44A79100883E18 /* EEGModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEDD2B44A79100883E18 /* EEGModels.swift */; };
 		4132FEE12B44A8D400883E18 /* SimulatedDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */; };
+		41DE17672B46C86D0021C573 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE17662B46C86D0021C573 /* StorageController.swift */; };
+		41DE17692B480A720021C573 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE17682B480A720021C573 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35E2ACC878D018CFFBD047E3 /* Pods-NeurofeedbackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurofeedbackApp.debug.xcconfig"; path = "Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4132FEAC2B44A6EC00883E18 /* NeurofeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurofeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppApp.swift; sourceTree = "<group>"; };
 		4132FEB12B44A6EC00883E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		4132FEDB2B44A77E00883E18 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		4132FEDD2B44A79100883E18 /* EEGModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEGModels.swift; sourceTree = "<group>"; };
 		4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedDataGenerator.swift; sourceTree = "<group>"; };
+		41DE17662B46C86D0021C573 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		41DE17682B480A720021C573 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4BA230A296461DF8C50FBAD2 /* Pods-NeurofeedbackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurofeedbackApp.release.xcconfig"; path = "Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp.release.xcconfig"; sourceTree = "<group>"; };
+		8C63ACBA8A8B62F663621FCF /* Pods_NeurofeedbackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeurofeedbackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF8C99320F9C883E259EE86 /* Pods_NeurofeedbackApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,8 @@
 				4132FEBF2B44A6EF00883E18 /* NeurofeedbackAppTests */,
 				4132FEC92B44A6EF00883E18 /* NeurofeedbackAppUITests */,
 				4132FEAD2B44A6EC00883E18 /* Products */,
+				9723B86EF6B24264712B9FB3 /* Pods */,
+				65B4B8D3864ABA6E58D1C852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,8 +167,27 @@
 			isa = PBXGroup;
 			children = (
 				4132FEE02B44A8D400883E18 /* SimulatedDataGenerator.swift */,
+				41DE17662B46C86D0021C573 /* StorageController.swift */,
+				41DE17682B480A720021C573 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		65B4B8D3864ABA6E58D1C852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C63ACBA8A8B62F663621FCF /* Pods_NeurofeedbackApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9723B86EF6B24264712B9FB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35E2ACC878D018CFFBD047E3 /* Pods-NeurofeedbackApp.debug.xcconfig */,
+				4BA230A296461DF8C50FBAD2 /* Pods-NeurofeedbackApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4132FED02B44A6F000883E18 /* Build configuration list for PBXNativeTarget "NeurofeedbackApp" */;
 			buildPhases = (
+				7AE6236FF41B0EDC8E7AC951 /* [CP] Check Pods Manifest.lock */,
 				4132FEA82B44A6EC00883E18 /* Sources */,
 				4132FEA92B44A6EC00883E18 /* Frameworks */,
 				4132FEAA2B44A6EC00883E18 /* Resources */,
+				5CF310A5A997FF14DFB530C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +317,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CF310A5A997FF14DFB530C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AE6236FF41B0EDC8E7AC951 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeurofeedbackApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4132FEA82B44A6EC00883E18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -294,7 +368,9 @@
 				4132FEE12B44A8D400883E18 /* SimulatedDataGenerator.swift in Sources */,
 				4132FEB22B44A6EC00883E18 /* ContentView.swift in Sources */,
 				4132FEB02B44A6EC00883E18 /* NeurofeedbackAppApp.swift in Sources */,
+				41DE17692B480A720021C573 /* Constants.swift in Sources */,
 				4132FEDE2B44A79100883E18 /* EEGModels.swift in Sources */,
+				41DE17672B46C86D0021C573 /* StorageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -431,7 +507,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -452,6 +528,7 @@
 		};
 		4132FED12B44A6F000883E18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E2ACC878D018CFFBD047E3 /* Pods-NeurofeedbackApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,6 +558,7 @@
 		};
 		4132FED22B44A6F000883E18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BA230A296461DF8C50FBAD2 /* Pods-NeurofeedbackApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -71,3 +71,17 @@ struct EEGReading {
         self.value = value
     }
 }
+
+struct EEGRecording {
+    let baseTime:TimeInterval
+    let data:[EEGFrequency:[EEGReading]]
+    let sessionId : UUID
+    let userId : UUID
+    
+    init(baseTime: TimeInterval, data: [EEGFrequency : [EEGReading]], sessionId: UUID, userId: UUID) {
+        self.baseTime = baseTime
+        self.data = data
+        self.sessionId = sessionId
+        self.userId = userId
+    }   
+}

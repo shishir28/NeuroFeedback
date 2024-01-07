@@ -12,10 +12,12 @@ class SimulatedDataGenerator  {
     private let sampleRate : Int
     
     private var currentTime : TimeInterval
+    private var values: [EEGChannel: Double]
     
     init(sampleRate:Int) {
         self.sampleRate = sampleRate
         self.currentTime = Date.now.timeIntervalSince1970
+        self.values = [:]
     }
     
     func generateSeries(values: inout [EEGChannel:Double], time: inout Double) -> EEGSeries {
@@ -35,29 +37,10 @@ class SimulatedDataGenerator  {
         return  EEGSeries(timestamp: (Date(timeIntervalSince1970: time)), readings:readings)
     }
     
-    func generateRecording (durationTime : TimeInterval, recordingOffset:TimeInterval = 0 ) -> (baseTime:TimeInterval, data:[EEGSeries]) {
-        let now = Date.now.timeIntervalSince1970
-        let startTimeSince1970 : TimeInterval = now -  durationTime
-        let baseTimeSince1970: TimeInterval = startTimeSince1970 - recordingOffset
-        
-        let sampleCount = Int(durationTime * Double(sampleRate))
-        
-        let result = (0..<sampleCount).map { _ in
-            return generateSeriesData(startTimeSince1970)
-        }
-        
-        return (baseTimeSince1970, result)
+    func next() -> EEGSeries {
+        generateSeries(values: &values, time: &currentTime)
     }
-    
-    func generateSeriesData(_ startTimeSince1970:TimeInterval) -> EEGSeries {
-        var values: [EEGChannel: Double] = [:]
-        var currentTime = startTimeSince1970
-        let series = generateSeries(values: &values, time: &currentTime)
-        return series
-    }
-    
 }
-
 
 class SimulatedRecorder {
     var sampleRate : Int = 0
@@ -69,18 +52,29 @@ class SimulatedRecorder {
             mockGenerators[frequency] = SimulatedDataGenerator(sampleRate: self.sampleRate )
         }
     }
-        
-    func generateRecording () -> [EEGFrequency:EEGReading] {
-        var result : [EEGFrequency:EEGReading] = [:]
+    
+    func generateRecording (sampleTime: TimeInterval, recordingOffset: TimeInterval = 0) -> (baseTime:TimeInterval, data:[EEGFrequency:[EEGReading]]) {
+        let firstTimeSince1970 = (Date.now.timeIntervalSince1970 - sampleTime)
+        let baseTimeSice1970 = firstTimeSince1970 - recordingOffset
+        let sampleSize  =  Int(sampleTime * Double(self.sampleRate))
+        var currentTime = firstTimeSince1970
+        var result : [EEGFrequency:[EEGReading]] = [:]
         for(frequency, dataGenerator) in mockGenerators {
             var channelReadings:[EEGChannel:Double] = [:];
-            var time: Double = 0;
-            let dataSeries = dataGenerator.generateSeries(values: &channelReadings, time: &time)
-            dataSeries.getChannels().forEach{channel in
-                let reading = dataSeries.getReadingForChannel(channel: channel)
-                result[frequency] = reading
+            for _ in 1...sampleSize {
+                let dataSeries = dataGenerator.generateSeries(values: &channelReadings, time: &currentTime)
+                dataSeries.getChannels().forEach{channel in
+                    let reading = dataSeries.getReadingForChannel(channel: channel)
+                    if(result[frequency] == nil) {
+                        result[frequency] = [reading]
+                    }else {
+                        var readings = result[frequency]
+                        readings?.append(reading)
+                        result[frequency] = readings
+                    }
+                }
             }
         }
-        return result
+        return (baseTimeSice1970,result)
     }
 }

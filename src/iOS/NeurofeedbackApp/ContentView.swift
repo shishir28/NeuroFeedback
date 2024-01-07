@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     private let sampleRate : Int = 60
+    private let sessionId : UUID = UUID(); //  dummy session id for logged on user
+    private let userId : UUID = UUID(); // Dummy user id ß
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -29,18 +32,20 @@ struct ContentView: View {
     }
     
     func generateSimulatedData() {
+        Constants.setUserDefaults()
         let recorder = SimulatedRecorder(sampleRate:self.sampleRate)
         
-        Timer.scheduledTimer(withTimeInterval: (1.0 / Double(self.sampleRate)) , repeats: true) { timer in
-            let  result = recorder.generateRecording()
-            for(frequency, reading) in result {
-                print(frequency)
-                print(reading)
-            }
+        Timer.scheduledTimer(withTimeInterval: 5 , repeats: true) { timer in
+          
+            
+            let tupleResult =  recorder.generateRecording(sampleTime:5)
+            let recordingData = EEGRecording(baseTime: tupleResult.baseTime, data: tupleResult.data, sessionId: self.sessionId, userId: self.userId)
+            
+            StorageController.shared.storeRecording(recordingData: recordingData)
+          
+            
         }
     }
-   
 }
-
 
 
