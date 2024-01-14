@@ -1,21 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using NeurofeedbackApp.Commons.EventMessaging.EventHubs;
+using System;
 using System.Threading.Tasks;
 
 namespace NeuroFeedbackApp.Function.MessageGateway.Services
 {
     public interface IMessageDataService
     {
-        Task<string> SaveRawData(string partnerName, dynamic messageBody);
+        Task ProduceMessageToEventHub(string messageBody);
     }
 
     public class MessageDataService : IMessageDataService
     {
-        public Task<string> SaveRawData(string partnerName, dynamic messageBody)
+        private readonly Producer _eventProducer;
+        public MessageDataService()
         {
-            throw new NotImplementedException();
+            _eventProducer = new Producer();
+            var connectionString = Environment.GetEnvironmentVariable("PublisherConnectionStrings");
+            var eventHubName = Environment.GetEnvironmentVariable("EventHubName");
+            _eventProducer.Init(connectionString, eventHubName);
         }
+
+        public async Task ProduceMessageToEventHub(string messageBody) =>
+            await _eventProducer.PublishAsync<string>(messageBody);
     }
 }

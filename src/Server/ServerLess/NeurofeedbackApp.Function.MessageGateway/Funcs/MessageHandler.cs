@@ -34,7 +34,8 @@ namespace NeuroFeedbackApp.Function.MessageGateway.Funcs
                 string name = req.Query["name"];
 
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-                dynamic data = JsonConvert.DeserializeObject(requestBody);
+           
+               await _messageDataService.ProduceMessageToEventHub(requestBody);
 
                 return new OkObjectResult($"Request saved");
             }
