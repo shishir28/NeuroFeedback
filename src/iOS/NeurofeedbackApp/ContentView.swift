@@ -42,7 +42,7 @@ struct ContentView: View {
             let recordingData = EEGRecording(baseTime: tupleResult.baseTime, data: tupleResult.data, sessionId: self.sessionId, userId: self.userId)
             
             StorageController.shared.storeRecording(recordingData: recordingData)
-          
+            
             
         }
     }

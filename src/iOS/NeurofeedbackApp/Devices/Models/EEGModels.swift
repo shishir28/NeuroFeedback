@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EEGFrequency : String, CaseIterable {
+enum EEGFrequency : String, CaseIterable,Encodable {
     case all
     case theta
     case alpha
@@ -20,7 +20,7 @@ enum EEGFrequency : String, CaseIterable {
 }
 
 //electrical activity or voltage measured by each electrode at that specific time
-struct EEGChannel :RawRepresentable, Hashable {
+struct EEGChannel :RawRepresentable, Hashable,Encodable {
     let rawValue: String
     // in-built channel in Muse
     static let af7 = EEGChannel(rawValue: "AF7")
@@ -37,7 +37,7 @@ struct EEGChannel :RawRepresentable, Hashable {
     static let o1 = EEGChannel(rawValue: "O1")
 }
 
-struct EEGSeries : Identifiable {
+struct EEGSeries : Identifiable,Encodable {
     var id :Date {
         timestamp
     }
@@ -61,7 +61,7 @@ struct EEGSeries : Identifiable {
     }
 }
 
-struct EEGReading {
+struct EEGReading:Encodable {
     
     let channel: EEGChannel
     let value : Double
@@ -72,7 +72,7 @@ struct EEGReading {
     }
 }
 
-struct EEGRecording {
+struct EEGRecording :Encodable{
     let baseTime:TimeInterval
     let data:[EEGFrequency:[EEGReading]]
     let sessionId : UUID

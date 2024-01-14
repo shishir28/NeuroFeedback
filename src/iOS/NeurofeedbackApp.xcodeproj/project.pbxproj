@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DF8C99320F9C883E259EE86 /* Pods_NeurofeedbackApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C63ACBA8A8B62F663621FCF /* Pods_NeurofeedbackApp.framework */; };
+		410CBB092B5398E700809657 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410CBB082B5398E700809657 /* Config.plist */; };
 		4132FEB02B44A6EC00883E18 /* NeurofeedbackAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */; };
 		4132FEB22B44A6EC00883E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132FEB12B44A6EC00883E18 /* ContentView.swift */; };
 		4132FEB42B44A6EF00883E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4132FEB32B44A6EF00883E18 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		35E2ACC878D018CFFBD047E3 /* Pods-NeurofeedbackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurofeedbackApp.debug.xcconfig"; path = "Target Support Files/Pods-NeurofeedbackApp/Pods-NeurofeedbackApp.debug.xcconfig"; sourceTree = "<group>"; };
+		410CBB082B5398E700809657 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		4132FEAC2B44A6EC00883E18 /* NeurofeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeurofeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4132FEAF2B44A6EC00883E18 /* NeurofeedbackAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurofeedbackAppApp.swift; sourceTree = "<group>"; };
 		4132FEB12B44A6EC00883E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4132FEB12B44A6EC00883E18 /* ContentView.swift */,
 				4132FEB32B44A6EF00883E18 /* Assets.xcassets */,
 				4132FEB52B44A6EF00883E18 /* Preview Content */,
+				410CBB082B5398E700809657 /* Config.plist */,
 			);
 			path = NeurofeedbackApp;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4132FEB72B44A6EF00883E18 /* Preview Assets.xcassets in Resources */,
+				410CBB092B5398E700809657 /* Config.plist in Resources */,
 				4132FEB42B44A6EF00883E18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -516,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
