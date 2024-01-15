@@ -31,7 +31,6 @@ namespace NeurofeedbackApp.Commons.EventMessaging.EventHubs
 
             // 4 Publish it to bus
             await _producerClient.SendAsync(eventBatch);
-
         }
 
         public async Task PublishAsync<T>(IEnumerable<T> myEvents)

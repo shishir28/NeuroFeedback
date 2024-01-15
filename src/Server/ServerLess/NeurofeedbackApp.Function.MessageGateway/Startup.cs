@@ -11,7 +11,7 @@ namespace NeuroFeedbackApp.Function.MessageGateway
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            var config = new ConfigurationBuilder()
+            _ = new ConfigurationBuilder()
               .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
               .AddEnvironmentVariables()
               .Build();
@@ -23,6 +23,5 @@ namespace NeuroFeedbackApp.Function.MessageGateway
             builder.Services.AddSingleton<ILoggerFactory, LoggerFactory>();
             //builder.Services.AddLogging(x => x.AddProvider(this.GetLoggingProvider()));
         }
-       
     }
 }

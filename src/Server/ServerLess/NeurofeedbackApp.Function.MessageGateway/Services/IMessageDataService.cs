@@ -1,4 +1,6 @@
 ﻿using NeurofeedbackApp.Commons.EventMessaging.EventHubs;
+using NeurofeedbackApp.Commons.Models;
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 
@@ -20,7 +22,10 @@ namespace NeuroFeedbackApp.Function.MessageGateway.Services
             _eventProducer.Init(connectionString, eventHubName);
         }
 
-        public async Task ProduceMessageToEventHub(string messageBody) =>
-            await _eventProducer.PublishAsync<string>(messageBody);
+        public async Task ProduceMessageToEventHub(string messageBody)
+        {
+            var recording = JsonConvert.DeserializeObject<EEGRecording>(messageBody);
+            await _eventProducer.PublishAsync<EEGRecording>(recording);
+        }
     }
 }

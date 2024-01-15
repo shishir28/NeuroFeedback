@@ -53,27 +53,32 @@ class SimulatedRecorder {
         }
     }
     
-    func generateRecording (sampleTime: TimeInterval, recordingOffset: TimeInterval = 0) -> (baseTime:TimeInterval, data:[EEGFrequency:[EEGReading]]) {
+    func generateRecording (sampleTime: TimeInterval, recordingOffset: TimeInterval = 0) -> (baseTime:TimeInterval, data:[EEGFrequencyReadings]) {
         let firstTimeSince1970 = (Date.now.timeIntervalSince1970 - sampleTime)
         let baseTimeSice1970 = firstTimeSince1970 - recordingOffset
         let sampleSize  =  Int(sampleTime * Double(self.sampleRate))
         var currentTime = firstTimeSince1970
-        var result : [EEGFrequency:[EEGReading]] = [:]
+        var frequncyAndReadings : [EEGFrequency:[EEGReading]] = [:]
         for(frequency, dataGenerator) in mockGenerators {
             var channelReadings:[EEGChannel:Double] = [:];
             for _ in 1...sampleSize {
                 let dataSeries = dataGenerator.generateSeries(values: &channelReadings, time: &currentTime)
                 dataSeries.getChannels().forEach{channel in
                     let reading = dataSeries.getReadingForChannel(channel: channel)
-                    if(result[frequency] == nil) {
-                        result[frequency] = [reading]
+                    if(frequncyAndReadings[frequency] == nil) {
+                        frequncyAndReadings[frequency] = [reading]
                     }else {
-                        var readings = result[frequency]
+                        var readings = frequncyAndReadings[frequency]
                         readings?.append(reading)
-                        result[frequency] = readings
+                        frequncyAndReadings[frequency] = readings
                     }
                 }
             }
+        }
+        var result :[EEGFrequencyReadings] = []
+        for (frequency, readings) in frequncyAndReadings {
+            let currentItem : EEGFrequencyReadings = EEGFrequencyReadings(frequency: frequency, readings: readings)
+            result.append(currentItem)
         }
         return (baseTimeSice1970,result)
     }

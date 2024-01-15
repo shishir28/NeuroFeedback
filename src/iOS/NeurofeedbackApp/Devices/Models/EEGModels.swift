@@ -72,15 +72,25 @@ struct EEGReading:Encodable {
     }
 }
 
+struct EEGFrequencyReadings:Encodable {
+    let frequency : EEGFrequency
+    let readings : [EEGReading]
+    init(frequency: EEGFrequency, readings: [EEGReading]) {
+        self.frequency = frequency
+        self.readings = readings
+    }
+}
+
 struct EEGRecording :Encodable{
     let baseTime:TimeInterval
-    let data:[EEGFrequency:[EEGReading]]
+    let data:[EEGFrequencyReadings]
     let sessionId : UUID
     let userId : UUID
     
-    init(baseTime: TimeInterval, data: [EEGFrequency : [EEGReading]], sessionId: UUID, userId: UUID) {
+    init(baseTime: TimeInterval, data: [EEGFrequencyReadings], sessionId: UUID, userId: UUID) {
         self.baseTime = baseTime
         self.data = data
+        
         self.sessionId = sessionId
         self.userId = userId
     }   

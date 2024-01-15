@@ -126,8 +126,10 @@ class StorageController {
             try _ = group.createStringAttribute("Userid")?.write(userId.uuidString)
             try _ = group.createStringAttribute("Time")?.write(recordingData.baseTime.description)
             
-            for (frequency, readings) in recordingData.data {
+            for (frequencyReadings) in recordingData.data {
                 
+                let frequency = frequencyReadings.frequency
+                let readings = frequencyReadings.readings
                 try group.createStringDataset("Frequency- \(frequency.rawValue)", dataspace: Dataspace(dims: [1, 1], maxDims: [1, 1]))?.write([frequency.rawValue])
                 let groupedChannel = Dictionary(grouping: readings, by: { $0.channel.rawValue })
                 
