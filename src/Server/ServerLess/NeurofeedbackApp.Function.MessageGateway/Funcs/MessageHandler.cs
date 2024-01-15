@@ -23,8 +23,7 @@ namespace NeuroFeedbackApp.Function.MessageGateway.Funcs
 
 
         [FunctionName("MessageHandler")]
-        public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "readings")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = "readings")] HttpRequest req)
         {
             this._log.LogInformation("C# HTTP trigger function processed a request.");
             try
